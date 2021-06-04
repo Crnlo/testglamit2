@@ -1,0 +1,372 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 2rem;
+
+  /*========== Colors ==========*/
+  --first-color: #069C54;
+  --first-color-alt: #048654;
+  --title-color: #24182b;
+  --text-color: #ffffff;
+  --body-color: #FBFEFD;
+  --container-color: #FFFFFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+
+/*========== BASE ==========*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h3,p,ul{
+  margin: 0;
+}
+
+ul{
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+}
+h1{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+a{
+  
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+hr{
+  width: 180px;
+}
+form{
+  margin: -50px;
+  
+}
+/*========== CLASS CSS ==========*/
+
+.header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: #24182b;
+}
+.logo {
+  
+  margin-top: 8px;
+  padding: 0;
+  transform: scale(0.5);
+  text-align: center;
+  
+}
+.title {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding: 0%;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #048654;
+}
+
+.section{
+  padding: 2rem 0 2rem;
+}
+.categorías{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  
+}
+
+/*========== LAYOUT ==========*/
+.bd-container{
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+ 
+}
+
+.bd-grid{
+  display: grid;
+  gap: 0.75rem;
+}
+
+
+
+/*========== NAV ==========*/
+.nav{
+position: relative;
+  max-width: 100%;
+  height: var(--header-height);
+ 
+}
+.nav__menu{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.nav__link,.nav__toggle{
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+}
+
+
+.nav__list{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__toggle{
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.nav__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/*========== BUTTONS ==========*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: var(--first-color-alt);
+}
+
+
+
+/*========== MENU ==========*/
+.menu__container{
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+.menu__content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  border-radius: .75rem;
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
+  padding: .5rem;
+}
+
+.menu__img{
+  width: 100px;
+  align-self: center;
+  margin-bottom: var(--mb-2);
+}
+
+.menu__name, .menu__preci{
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.menu__name{
+  font-size: var(--normal-font-size);
+}
+
+.menu__detail, .menu__preci{
+  font-size: var(--small-font-size);
+}
+
+.menu__detail{
+  margin-bottom: var(--mb-1);
+}
+
+.menu__button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  padding: .625rem .813rem;
+  border-radius: .5rem 0 .5rem 0;
+}
+
+
+/*========== FOOTER ==========*/
+.footer__container{
+  width: 100%;
+  height: 100px;
+  background-color: #24182b;
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+
+/*========== MEDIA QUERIES ==========*/
+
+@media screen and (max-width: 750px){
+  .nav__menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--body-color);
+    transition: .4s;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    border-radius: 0 0 1rem 1rem;
+    
+  }
+
+ 
+  .menu__container{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+
+  .menu__content{
+   
+    display: grid;
+   
+    grid-template-columns: repeat(1, 1fr);
+    background-color: var(--container-color);
+    border-radius: .75rem;
+    box-shadow: 0 2px 4px rgba(3,74,40,.15);
+    padding: .5rem;
+  }
+
+
+
+
+
+}
+
+/*========== MEDIA QUERIES min-width:300px==========*/
+
+
+@media screen and (min-width: 300px){
+  
+  .menu__container{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+  
+}
+
+@media screen and  (min-width: 300px){
+  body{
+    margin: 0;
+  }
+
+ 
+
+  .nav{
+    height: calc(var(--header-height) + 0.5rem);
+  }
+  .nav__list{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__item{
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__toggle{
+    display:none;
+  }
+
+  .bx-menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .menu__container{
+    margin-top: var(--mb-6);
+  }
+
+  .menu__container{
+    grid-template-columns: repeat(3, 210px);
+    column-gap: 4rem;
+  }
+  .menu__content{
+    padding: 1.5rem;
+  }
+  .menu__img{
+    width: 100px;
+  }
+
+  
+}
+
+
